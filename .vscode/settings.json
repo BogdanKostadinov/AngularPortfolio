@@ -7,6 +7,12 @@
       "source.organizeImports": true
     }
   },
+  "[html]": {
+    "editor.defaultFormatter": "MikeBovenlander.formate",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
