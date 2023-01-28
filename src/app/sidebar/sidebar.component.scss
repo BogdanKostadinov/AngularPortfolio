@@ -1,0 +1,127 @@
+.main {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.sidenav-container {
+    height  : 92%;
+    position: relative;
+}
+
+.sidenav-content {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.sidenav {
+    width           : 250px;
+    background-color: #1e2a3a;
+}
+
+.sidenav .mat-toolbar {
+    background: #fff;
+    color     : #fff;
+}
+
+.mat-toolbar.mat-primary {
+    // background: #eee;  // Change the color of the navigation bar
+    // color: #000;  // Change the font color of the navigation bar
+    position: sticky;
+    top     : 0;
+    z-index : 1;
+}
+
+.is-active {
+    background-color: #aaa;
+    color           : #fff;
+}
+
+.is-active:hover {
+    background-color: #aaa;
+    color           : #fff;
+}
+
+.is-active:focus {
+    background-color: #aaa;
+    color           : #fff;
+}
+
+.logo {
+    margin-right: 10px;
+    font-size   : 18px;
+    width       : 100%;
+    font-weight : bolder;
+    text-align  : center;
+}
+
+.toolbar-icon {
+    padding: 0 0px;
+}
+
+.sidenavContainer {
+    height: 100%;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.top-nav {
+    height  : 64px;
+    position: fixed;
+    top     : 0px;
+}
+
+.fixed-toolbar {
+    position: sticky;
+    z-index : 5;
+    top     : 0;
+    width   : 100%;
+}
+
+.inner-content {
+    position: absolute;
+    bottom  : 0;
+    left    : 0;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #007ACC
+}
+
+.active {
+    font-weight     : bold;
+    background-color: #CFCFCF;
+    color           : darkred;
+}
+
+.active:active {
+    font-weight     : bold;
+    background-color: lightpink;
+}
+
+.active-icon {
+    color: red;
+}
+
+mat-nav-list {
+    mat-icon {
+        vertical-align: middle;
+        color         : #54B689;
+    }
+
+    .ml-2 {
+        vertical-align: middle;
+        color         : rgba(255, 255, 255, 0.7);
+    }
+}
+
+mat-sidenav-content {
+    background-color: #111821;
+}
