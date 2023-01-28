@@ -1,24 +1,72 @@
-<p>sidebar works!</p>
-<!-- TODO: Format code with formatte -->
-<div class="example-container">
-    <mat-toolbar color="primary" class="example-toolbar">
-      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <h1 class="example-app-name">Responsive App</h1>
-    </mat-toolbar>
-  
-    <mat-sidenav-container class="example-sidenav-container"
-                           >
-      <mat-sidenav #snav fixedTopGap="56">
-        <mat-nav-list>
-          <a mat-list-item routerLink="."></a>
-        </mat-nav-list>
-      </mat-sidenav>
-  
-      <mat-sidenav-content>
-        <p>
-        </p>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-</div>
-  
-  
+<!-- TODO: apply some coloring, fix routing change main content to something, align
+some content (sidebar) -->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon routerLinkActive="active-icon">menu</mat-icon>
+    </button>
+    <span>{{ title }}</span>
+
+    <span class="toolbar-spacer"></span>
+
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onSelectOption('1')">
+        <mat-icon>wb_sunny</mat-icon>
+        <span>Option 1</span>
+      </button>
+      <button mat-menu-item (click)="onSelectOption('2')">
+        <mat-icon>lens</mat-icon>
+        <span>Option 2</span>
+      </button>
+      <button mat-menu-item (click)="onSelectOption('3')">
+        <mat-icon>brightness_3</mat-icon>
+        <span>Option 3</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer [mode]="'side'" class="sidenav" [opened]="true">
+    <mat-nav-list>
+      <a
+        [routerLink]="['/home']"
+        mat-list-item
+        href="#"
+        routerLinkActive="active"
+        ><mat-icon routerLinkActive="active-icon">person</mat-icon
+        ><span class="ml-2"> About me </span></a
+      >
+      <a
+        [routerLink]="['/profile']"
+        mat-list-item
+        href="#"
+        routerLinkActive="active"
+        ><mat-icon routerLinkActive="active-icon">code</mat-icon
+        ><span class="ml-2"> Projects </span></a
+      >
+      <a
+        [routerLink]="['/profile']"
+        mat-list-item
+        href="#"
+        routerLinkActive="active"
+        ><mat-icon routerLinkActive="active-icon">list_alt</mat-icon
+        ><span class="ml-2"> Resume </span></a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
+    <div class="main">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

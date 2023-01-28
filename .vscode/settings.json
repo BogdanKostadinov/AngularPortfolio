@@ -1,5 +1,5 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -7,16 +7,13 @@
       "source.organizeImports": true
     }
   },
-  "[html]": {
-    "editor.defaultFormatter": "MikeBovenlander.formate",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": true
-    }
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "editor.defaultFormatter": "MikeBovenlander.formate"
+  },
+  "scss.lint.zeroUnits": "warning",
+  "scss.lint.unknownAtRules": "ignore",
+  "scss.format.spaceAroundSelectorSeparator": true
 }
