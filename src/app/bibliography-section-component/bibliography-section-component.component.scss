@@ -1,0 +1,26 @@
+.container {
+    // background-color: white;
+    margin    : auto;
+    width     : 85%;
+    height    : 85%;
+    position  : relative;
+    margin-top: 50px;
+}
+
+.bio {
+    h1 {
+        color: white;
+    }
+
+    h2,
+    p {
+        color: rgba(255, 255, 255, 0.7)
+    }
+}
+
+img {
+    margin-top   : 20px;
+    height       : 50%;
+    border-radius: 3rem;
+    padding      : 20px;
+}
