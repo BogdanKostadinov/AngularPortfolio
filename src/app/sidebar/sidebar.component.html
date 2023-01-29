@@ -38,26 +38,17 @@ some content (sidebar) -->
   <mat-sidenav #drawer [mode]="'side'" class="sidenav" [opened]="true">
     <mat-nav-list>
       <a
-        [routerLink]="['/home']"
+        [routerLink]="['/bibliography-section-component']"
         mat-list-item
         href="#"
-        routerLinkActive="active"
         ><mat-icon routerLinkActive="active-icon">person</mat-icon
         ><span class="ml-2"> About me </span></a
       >
-      <a
-        [routerLink]="['/profile']"
-        mat-list-item
-        href="#"
-        routerLinkActive="active"
+      <a [routerLink]="['/profile']" mat-list-item href="#"
         ><mat-icon routerLinkActive="active-icon">code</mat-icon
         ><span class="ml-2"> Projects </span></a
       >
-      <a
-        [routerLink]="['/profile']"
-        mat-list-item
-        href="#"
-        routerLinkActive="active"
+      <a [routerLink]="['/profile']" mat-list-item href="#"
         ><mat-icon routerLinkActive="active-icon">list_alt</mat-icon
         ><span class="ml-2"> Resume </span></a
       >
