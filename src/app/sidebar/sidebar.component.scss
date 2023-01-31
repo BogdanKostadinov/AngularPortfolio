@@ -107,13 +107,13 @@
 }
 
 .active-icon {
-    color: red;
+    color: #54B689;
 }
 
 mat-nav-list {
     mat-icon {
         vertical-align: middle;
-        color         : #54B689;
+        color         : rgba(255, 255, 255, 0.7);
     }
 
     .ml-2 {
@@ -124,4 +124,21 @@ mat-nav-list {
 
 mat-sidenav-content {
     background-color: #111821;
+}
+
+mat-sidenav {
+    text-align: center;
+}
+
+img {
+    margin-top   : 30px;
+    margin-bottom: 10px;
+    max-width    : 50%;
+    border-radius: 50%;
+}
+
+.mat-divider {
+    border-top-color: rgb(255 255 255 / 43%);
+    opacity         : .45;
+    margin-top      : 15px;
 }
