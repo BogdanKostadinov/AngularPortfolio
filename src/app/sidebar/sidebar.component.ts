@@ -1,32 +1,42 @@
-import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent {
-  title = 'Material Layout Demo';
-  contentMargin = 240;
+export class SidebarComponent implements OnInit, OnDestroy {
+  title = 'Bogdan Kostadinov CV';
+  mode!: 'over' | 'side';
+  openSidenav!: boolean;
+  sub!: Subscription;
+  private screenWidth$ = new BehaviorSubject<number>(window.innerWidth);
 
-  constructor(private router: Router, private snackBar: MatSnackBar) {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  constructor() {}
 
-  openSnackBar(msg: string): void {
-    this.snackBar.open(msg, 'X', {
-      duration: 2000,
-      horizontalPosition: 'center',
-      verticalPosition: 'top',
-      panelClass: 'notif-error',
+  ngOnInit(): void {
+    this.sub = this.getScreenWidth().subscribe((width) => {
+      if (width < 640) {
+        this.mode = 'over';
+        this.openSidenav = false;
+      } else if (width > 640) {
+        this.mode = 'side';
+        this.openSidenav = true;
+      }
     });
   }
 
-  onSelectOption(option: string): void {
-    const msg = `Chose option ${option}`;
-    this.openSnackBar(msg);
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
 
-    /* To route to another page from here */
-    // this.router.navigate(['/home']);
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth$.next(event.target.innerWidth);
+  }
+  getScreenWidth(): Observable<number> {
+    return this.screenWidth$.asObservable();
   }
 }

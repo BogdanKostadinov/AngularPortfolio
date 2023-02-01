@@ -1,15 +1,10 @@
-<!-- TODO: apply some coloring, fix routing change main content to something, align
-some content (sidebar) -->
-
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button (click)="drawer.toggle()">
+    <button *ngIf="!openSidenav" mat-icon-button (click)="drawer.toggle()">
       <mat-icon routerLinkActive="active-icon">menu</mat-icon>
     </button>
     <span>{{ title }}</span>
-
     <span class="toolbar-spacer"></span>
-
     <!-- <button
       mat-icon-button
       [matMenuTriggerFor]="menu"
@@ -35,7 +30,7 @@ some content (sidebar) -->
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer [mode]="'side'" class="sidenav" [opened]="true">
+  <mat-sidenav #drawer [mode]="mode" class="sidenav" [opened]="openSidenav">
     <img mat-card-image src="../../assets/boko1Crop.jpg" />
     <mat-divider></mat-divider>
     <mat-nav-list>
@@ -57,7 +52,7 @@ some content (sidebar) -->
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
+  <mat-sidenav-content>
     <div class="main">
       <router-outlet #outlet="outlet"></router-outlet>
     </div>
