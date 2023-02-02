@@ -1,31 +1,10 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <button *ngIf="!openSidenav" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon routerLinkActive="active-icon">menu</mat-icon>
+      <mat-icon>menu</mat-icon>
     </button>
     <span>{{ title }}</span>
     <span class="toolbar-spacer"></span>
-    <!-- <button
-      mat-icon-button
-      [matMenuTriggerFor]="menu"
-      aria-label="Example icon-button with a menu"
-    >
-      <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="onSelectOption('1')">
-        <mat-icon>wb_sunny</mat-icon>
-        <span>Option 1</span>
-      </button>
-      <button mat-menu-item (click)="onSelectOption('2')">
-        <mat-icon>lens</mat-icon>
-        <span>Option 2</span>
-      </button>
-      <button mat-menu-item (click)="onSelectOption('3')">
-        <mat-icon>brightness_3</mat-icon>
-        <span>Option 3</span>
-      </button>
-    </mat-menu> -->
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -33,18 +12,24 @@
   <mat-sidenav #drawer [mode]="mode" class="sidenav" [opened]="openSidenav">
     <img mat-card-image src="../../assets/boko1Crop.jpg" />
     <mat-divider></mat-divider>
-    <mat-nav-list>
-      <a [routerLink]="['/about-me']" mat-list-item href="#"
-        ><mat-icon routerLinkActive="active-icon">person</mat-icon
-        ><span class="ml-2"> About me </span></a
+    <mat-nav-list class="navigationList">
+      <a [routerLink]="['/about-me']" mat-list-item href="#">
+        <span class="routingItems"
+          ><mat-icon routerLinkActive="active-icon">person</mat-icon
+          ><span class="ml-2"> About me </span></span
+        ></a
       >
-      <a [routerLink]="['/skills-section-component']" mat-list-item href="#"
-        ><mat-icon routerLinkActive="active-icon">code</mat-icon
-        ><span class="ml-2"> Projects </span></a
+      <a [routerLink]="['/about-me']" mat-list-item href="#">
+        <span class="routingItems"
+          ><mat-icon routerLinkActive="active-icon">code</mat-icon
+          ><span class="ml-2"> Projects </span></span
+        ></a
       >
-      <a [routerLink]="['/profile']" mat-list-item href="#"
-        ><mat-icon routerLinkActive="active-icon">list_alt</mat-icon
-        ><span class="ml-2"> Resume </span></a
+      <a [routerLink]="['/test']" mat-list-item href="#"
+        ><span class="routingItems"
+          ><mat-icon routerLinkActive="active-icon">list_alt</mat-icon
+          ><span class="ml-2"> Resume </span></span
+        ></a
       >
     </mat-nav-list>
   </mat-sidenav>
