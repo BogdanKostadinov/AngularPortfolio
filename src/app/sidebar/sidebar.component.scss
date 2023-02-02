@@ -1,10 +1,10 @@
 .main {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y      : hidden;
+    overflow-x      : hidden;
+    background-color: #111821;
 }
 
 .sidenav-container {
-    height  : 92%;
     position: relative;
 }
 
@@ -18,14 +18,41 @@
 .sidenav {
     width           : 220px;
     background-color: #1e2a3a;
+
+    img {
+        margin-top   : 25px;
+        margin-bottom: 25px;
+        max-width    : 50%;
+        border-radius: 50%;
+        display      : block;
+        margin-left  : auto;
+        margin-right : auto;
+    }
+
+    .routingItems {
+        margin-left: 35px;
+    }
+
+    .navigationList {
+        mat-icon {
+            color         : rgba(255, 255, 255, 0.7);
+            vertical-align: middle;
+        }
+
+        .ml-2 {
+            vertical-align: middle;
+            color         : rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .mat-divider {
+        border-top-color: rgb(255 255 255 / 43%);
+        opacity         : .45;
+        margin-top      : 15px;
+    }
 }
 
-.sidenav .mat-toolbar {
-    background: #fff;
-    color     : #fff;
-}
-
-.mat-toolbar.mat-primary {
+.mat-toolbar {
     // background: #eee;  // Change the color of the navigation bar
     // color: #000;  // Change the font color of the navigation bar
     position: sticky;
@@ -48,43 +75,14 @@
     color           : #fff;
 }
 
-.toolbar-icon {
-    padding: 0 0px;
-}
-
-.sidenavContainer {
-    height: 100%;
-}
-
 .toolbar-spacer {
     flex: 1 1 auto;
-}
-
-.top-nav {
-    height  : 64px;
-    position: fixed;
-    top     : 0px;
-}
-
-.fixed-toolbar {
-    position: sticky;
-    z-index : 5;
-    top     : 0;
-    width   : 100%;
 }
 
 .inner-content {
     position: absolute;
     bottom  : 0;
     left    : 0;
-}
-
-.nav-link {
-    cursor: pointer;
-}
-
-.navbar-light .navbar-nav .nav-link.active {
-    color: #007ACC
 }
 
 .active {
@@ -100,37 +98,4 @@
 
 .active-icon {
     color: #54B689;
-}
-
-mat-nav-list {
-    mat-icon {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
-    }
-
-    .ml-2 {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
-    }
-}
-
-mat-sidenav-content {
-    background-color: #111821;
-}
-
-mat-sidenav {
-    text-align: center;
-}
-
-img {
-    margin-top   : 30px;
-    margin-bottom: 10px;
-    max-width    : 50%;
-    border-radius: 50%;
-}
-
-.mat-divider {
-    border-top-color: rgb(255 255 255 / 43%);
-    opacity         : .45;
-    margin-top      : 15px;
 }
