@@ -12,24 +12,35 @@
   <mat-sidenav #drawer [mode]="mode" class="sidenav" [opened]="openSidenav">
     <img mat-card-image src="../../assets/boko1Crop.jpg" />
     <mat-divider></mat-divider>
-    <mat-nav-list class="navigationList">
-      <a [routerLink]="['/about-me']" mat-list-item href="#">
-        <span class="routingItems"
-          ><mat-icon routerLinkActive="active-icon">person</mat-icon
-          ><span class="ml-2"> About me </span></span
-        ></a
+    <mat-nav-list>
+      <a
+        [routerLink]="['/about-me']"
+        mat-list-item
+        href="#"
+        routerLinkActive="active-link"
       >
-      <a [routerLink]="['/about-me']" mat-list-item href="#">
-        <span class="routingItems"
-          ><mat-icon routerLinkActive="active-icon">code</mat-icon
-          ><span class="ml-2"> Projects </span></span
-        ></a
+        <mat-icon class="icon" [routerLinkActive]="['active-icon']"
+          >person</mat-icon
+        >
+        <span class="ml-2 text" [routerLinkActive]="['active-text']"
+          >About me</span
+        >
+      </a>
+      <a
+        [routerLink]="['/skills-section-component']"
+        routerLinkActive="active-link"
+        mat-list-item
+        href="#"
+        ><mat-icon [routerLinkActive]="['active-icon']">code</mat-icon
+        ><span class="ml-2" [routerLinkActive]="['active-text']">
+          Projects
+        </span></a
       >
-      <a [routerLink]="['/test']" mat-list-item href="#"
-        ><span class="routingItems"
-          ><mat-icon routerLinkActive="active-icon">list_alt</mat-icon
-          ><span class="ml-2"> Resume </span></span
-        ></a
+      <a [routerLink]="['/profile']" mat-list-item href="#"
+        ><mat-icon [routerLinkActive]="['active-icon']">list_alt</mat-icon
+        ><span class="ml-2" [routerLinkActive]="['active-text']">
+          Resume
+        </span></a
       >
     </mat-nav-list>
   </mat-sidenav>
