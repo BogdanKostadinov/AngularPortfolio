@@ -33,21 +33,6 @@
     z-index : 1;
 }
 
-.is-active {
-    background-color: #aaa;
-    color           : #fff;
-}
-
-.is-active:hover {
-    background-color: #aaa;
-    color           : #fff;
-}
-
-.is-active:focus {
-    background-color: #aaa;
-    color           : #fff;
-}
-
 .toolbar-icon {
     padding: 0 0px;
 }
@@ -83,24 +68,15 @@
     cursor: pointer;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-    color: #007ACC
-}
-
-.active {
-    font-weight     : bold;
-    background-color: #CFCFCF;
-    color           : darkred;
-}
-
-.active:active {
-    font-weight     : bold;
-    background-color: lightpink;
-}
-
 .active-icon {
-    color: #54B689;
+    color: #54B689 !important;
 }
+
+
+.active-text {
+    color: #54B689 !important;
+}
+
 
 mat-nav-list {
     mat-icon {
