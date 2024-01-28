@@ -1,6 +1,5 @@
 mat-sidenav-content {
     background-color: #111821;
-    padding-top     : 50px;
 }
 
 mat-nav-list {
@@ -80,6 +79,10 @@ mat-toolbar {
     .toolbar-spacer {
         flex: 1 1 auto;
     }
+}
+
+.main {
+    padding-top: 50px;
 }
 
 .boko_img {
