@@ -1,24 +1,38 @@
-.main {
-    overflow-y      : hidden;
-    overflow-x      : hidden;
+mat-sidenav-content {
     background-color: #111821;
+    padding-top     : 50px;
 }
 
-.sidenav-container {
-    height  : 100%;
-    position: fixed;
+mat-nav-list {
+    mat-icon {
+        vertical-align: middle;
+        color         : rgba(255, 255, 255, 0.7);
+    }
+
+    .ml-2 {
+        vertical-align: middle;
+        color         : rgba(255, 255, 255, 0.7);
+    }
+
+    .nav-link {
+        cursor: pointer;
+    }
+
+    .active-icon {
+        color: #54B689 !important;
+    }
+
+    .active-text {
+        color: #54B689 !important;
+    }
 }
 
-.sidenav-content {
-    width          : 100%;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.sidenav {
+mat-sidenav {
+    padding-top     : 65px;
+    position        : fixed;
     width           : 220px;
     background-color: #1e2a3a;
+    text-align      : center;
 
     img {
         margin-top   : 25px;
@@ -46,93 +60,31 @@
         }
     }
 
-    .mat-divider {
+    mat-divider {
         border-top-color: rgb(255 255 255 / 43%);
         opacity         : .45;
         margin-top      : 15px;
     }
 }
 
-.mat-toolbar {
-    // background: #eee;  // Change the color of the navigation bar
-    // color: #000;  // Change the font color of the navigation bar
-    position: sticky;
-    top     : 0;
-    z-index : 1;
-}
-
-
-.toolbar-icon {
-    padding: 0;
-}
-
-.sidenavContainer {
-    height: 100%;
-}
-
-.toolbar-spacer {
-    flex: 1 1 auto;
-}
-
-.top-nav {
-    height  : 64px;
+mat-toolbar {
     position: fixed;
-}
-
-.fixed-toolbar {
-    position: sticky;
-    z-index : 5;
     top     : 0;
+    z-index : 1000;
     width   : 100%;
-}
 
-.inner-content {
-    position: absolute;
-    bottom  : 0;
-    left    : 0;
-}
-
-.nav-link {
-    cursor: pointer;
-}
-
-.active-icon {
-    color: #54B689 !important;
-}
-
-.active-text {
-    color: #54B689 !important;
-}
-
-mat-nav-list {
-    mat-icon {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
+    .toolbar-icon {
+        padding: 0;
     }
 
-    .ml-2 {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
+    .toolbar-spacer {
+        flex: 1 1 auto;
     }
 }
 
-mat-sidenav-content {
-    background-color: #111821;
-}
-
-mat-sidenav {
-    text-align: center;
-}
-
-img {
+.boko_img {
     margin-top   : 30px;
     margin-bottom: 10px;
     max-width    : 50%;
     border-radius: 50%;
-}
-
-.mat-divider {
-    border-top-color: rgb(255 255 255 / 43%);
-    opacity         : .45;
-    margin-top      : 15px;
 }
