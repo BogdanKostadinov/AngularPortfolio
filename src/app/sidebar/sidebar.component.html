@@ -42,6 +42,23 @@
           Resume
         </span></a
       >
+      <mat-divider></mat-divider>
+      <a
+        mat-list-item
+        (click)="openConfirmationWindow('https://github.com/BogdanKostadinov')"
+        ><fa-icon class="mat-icon material-icons" [icon]="faGithub"></fa-icon
+        ><span class="ml-2"> Github </span></a
+      >
+      <a
+        mat-list-item
+        (click)="
+          openConfirmationWindow(
+            'https://www.linkedin.com/in/bogdan-kostadinov/'
+          )
+        "
+        ><fa-icon class="mat-icon material-icons" [icon]="faLinkedIn"></fa-icon
+        ><span class="ml-2"> LinkedIn </span></a
+      >
     </mat-nav-list>
   </mat-sidenav>
 

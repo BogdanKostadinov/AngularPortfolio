@@ -3,7 +3,12 @@ mat-sidenav-content {
 }
 
 mat-nav-list {
-    mat-icon {
+    a {
+        padding-left: 60px;
+    }
+
+    mat-icon,
+    fa-icon {
         vertical-align: middle;
         color         : rgba(255, 255, 255, 0.7);
     }
@@ -27,11 +32,10 @@ mat-nav-list {
 }
 
 mat-sidenav {
-    padding-top     : 65px;
-    position        : fixed;
-    width           : 220px;
-    background-color: #1e2a3a;
-    text-align      : center;
+    padding-top        : 65px;
+    position           : fixed;
+    width              : 220px;
+    background-color   : #1e2a3a;
 
     img {
         margin-top   : 25px;
@@ -43,27 +47,13 @@ mat-sidenav {
         margin-right : auto;
     }
 
-    .routingItems {
-        margin-left: 35px;
-    }
 
-    .navigationList {
-        mat-icon {
-            color         : rgba(255, 255, 255, 0.7);
-            vertical-align: middle;
-        }
+}
 
-        .ml-2 {
-            vertical-align: middle;
-            color         : rgba(255, 255, 255, 0.7);
-        }
-    }
-
-    mat-divider {
-        border-top-color: rgb(255 255 255 / 43%);
-        opacity         : .45;
-        margin-top      : 15px;
-    }
+mat-divider {
+    border-top-color: rgb(255 255 255 / 43%);
+    opacity         : .45;
+    margin-top      : 15px;
 }
 
 mat-toolbar {

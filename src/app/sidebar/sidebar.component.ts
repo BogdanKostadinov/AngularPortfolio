@@ -1,5 +1,8 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { ConfirmWindowComponent } from '../shared/components/confirm-window/confirm-window.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,14 +10,17 @@ import { BehaviorSubject, Observable, Subscription } from 'rxjs';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit, OnDestroy {
+  faGithub = faGithub;
+  faLinkedIn = faLinkedin;
   title = 'Bogdan Kostadinov CV';
   mode!: 'over' | 'side';
   openSidenav!: boolean;
   sub!: Subscription;
+  bsModalRef!: BsModalRef;
   private screenWidth$ = new BehaviorSubject<number>(window.innerWidth);
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor() {}
+  constructor(private modalService: BsModalService) {}
 
   ngOnInit(): void {
     this.sub = this.getScreenWidth().subscribe((width) => {
@@ -33,10 +39,22 @@ export class SidebarComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('window:resize', ['$event'])
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onResize(event: any) {
     this.screenWidth$.next(event.target.innerWidth);
   }
   getScreenWidth(): Observable<number> {
     return this.screenWidth$.asObservable();
+  }
+  openConfirmationWindow(url: string): void {
+    this.bsModalRef = this.modalService.show(ConfirmWindowComponent, {
+      initialState: {
+        message: 'Are you sure you want to navigate?',
+      },
+    });
+
+    this.bsModalRef.content.onConfirm.subscribe(() => {
+      window.open(url)?.focus();
+    });
   }
 }
