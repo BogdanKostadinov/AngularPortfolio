@@ -1,23 +1,17 @@
 .bio {
+  h1 {
+    color: white;
+  }
 
-    h1 {
-        color: white;
-    }
-
-    h2,
-    p {
-        color: rgba(255, 255, 255, 0.7)
-    }
+  h2,
+  p {
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 img {
-    margin-top   : 20px;
-    height       : 50%;
-    border-radius: 3rem;
-    padding      : 20px;
-}
-
-.container {
-    padding         : 30px;
-    background-color: #1b2531 !important;
+  margin-top: 20px;
+  height: 50%;
+  border-radius: 3rem;
+  padding: 20px;
 }

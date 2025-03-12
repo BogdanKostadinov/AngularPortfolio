@@ -1,7 +1,19 @@
-.container {
-    padding-top: 50px;
+.skills {
+  min-height: 300px;
 }
 
-.skills {
-    min-height: 300px;
+.title-section {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-intro {
+  p {
+    padding-left: 3rem;
+    color: white !important;
+  }
+  margin-bottom: 3rem;
 }

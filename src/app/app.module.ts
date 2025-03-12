@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -24,7 +23,7 @@ import { MaterialModule } from './shared/modules/material.module';
     AboutMePageComponent,
     CardComponent,
     ConfirmWindowComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,

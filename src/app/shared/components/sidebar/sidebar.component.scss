@@ -1,83 +1,94 @@
 mat-sidenav-content {
-    background-color: #111821;
+  background-color: #111821;
 }
 
 mat-nav-list {
-    a {
-        padding-left: 60px;
-    }
+  a {
+    padding-left: 3.5rem;
+  }
 
-    mat-icon,
-    fa-icon {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
-    }
+  mat-icon,
+  fa-icon {
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.7);
+  }
 
-    .ml-2 {
-        vertical-align: middle;
-        color         : rgba(255, 255, 255, 0.7);
-    }
+  .ml-2 {
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.7);
+  }
 
-    .nav-link {
-        cursor: pointer;
-    }
+  .nav-link {
+    cursor: pointer;
+  }
 
-    .active-icon {
-        color: #54B689 !important;
-    }
+  .active-icon {
+    color: #54b689 !important;
+  }
 
-    .active-text {
-        color: #54B689 !important;
-    }
+  .active-text {
+    color: #54b689 !important;
+  }
 }
 
 mat-sidenav {
-    padding-top        : 65px;
-    position           : fixed;
-    width              : 220px;
-    background-color   : #1e2a3a;
+  position: fixed;
+  width: 220px;
+  background-color: #1e2a3a;
 
-    img {
-        margin-top   : 25px;
-        margin-bottom: 25px;
-        max-width    : 50%;
-        border-radius: 50%;
-        display      : block;
-        margin-left  : auto;
-        margin-right : auto;
-    }
+  &.padded-top {
+    padding-top: 65px;
+  }
 
-
+  img {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 mat-divider {
-    border-top-color: rgb(255 255 255 / 43%);
-    opacity         : .45;
-    margin-top      : 15px;
+  border-top-color: rgb(255 255 255 / 43%);
+  opacity: 0.45;
+  margin-top: 15px;
 }
 
 mat-toolbar {
-    position: fixed;
-    top     : 0;
-    z-index : 1000;
-    width   : 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #1e2a3a;
+  color: white;
 
-    .toolbar-icon {
-        padding: 0;
-    }
+  button {
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
 
-    .toolbar-spacer {
-        flex: 1 1 auto;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toolbar-title {
+    flex: 1;
+    text-align: center;
+  }
 }
 
 .main {
-    padding-top: 50px;
+  &.padded-top {
+    padding-top: 20px;
+  }
 }
 
 .boko_img {
-    margin-top   : 30px;
-    margin-bottom: 10px;
-    max-width    : 50%;
-    border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  max-width: 50%;
+  border-radius: 50%;
 }
