@@ -24,10 +24,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sub = this.getScreenWidth().subscribe((width) => {
-      if (width < 640) {
+      if (width < 930) {
         this.mode = 'over';
         this.openSidenav = false;
-      } else if (width > 640) {
+      } else if (width > 930) {
         this.mode = 'side';
         this.openSidenav = true;
       }

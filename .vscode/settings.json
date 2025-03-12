@@ -11,7 +11,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
-    "editor.defaultFormatter": "MikeBovenlander.formate"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "scss.lint.zeroUnits": "warning",
   "scss.lint.unknownAtRules": "ignore",

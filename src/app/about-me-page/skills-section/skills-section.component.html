@@ -1,71 +1,78 @@
-<div class="container">
-  <div
-    class="flex-container"
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutAlign="space-evenly center"
-  >
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'Angular'"
-        [description]="
-          'Proficient in Angular architecture, RxJS for reactive programming, NgRx for state management, testing with Jasmine and Protractor, and integrating Angular apps with RESTful services or GraphQL endpoints.'
-        "
-        [imageRoute]="'../../assets/angular-icon.png'"
-      ></app-card-component>
-    </div>
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'Typescript'"
-        [description]="
-          'Proficient in TypeScript’s static typing, understanding of advanced types, generics, and decorators. Familiar with configuration and compiler options. Experience with testing TypeScript code and integration with build tools and frameworks.'
-        "
-        [imageRoute]="'../../assets/typescript.png'"
-      ></app-card-component>
-    </div>
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'C#'"
-        [description]="
-          'Proficient in .NET architecture, for reactive programming, testing with xUnit.net, and integrating .NET apps with RESTful services and GraphQL endpoints.'
-        "
-        [imageRoute]="'../../assets/csharp.png'"
-      ></app-card-component>
-    </div>
+<h1 class="title-section">What I do</h1>
+<div class="section-intro">
+  <p>
+    I have more than 10 years' experience building software for clients all over
+    the world. Below is a quick overview of my main technical skill sets and
+    technologies I use. Want to find out more about my experience? Check out my
+    online resume and project portfolio.
+  </p>
+</div>
+
+<div
+  class="flex-container"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign="space-evenly"
+>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'Angular'"
+      [description]="
+        'Proficient in Angular architecture, RxJS for reactive programming, NgRx for state management, testing with Jasmine and Protractor, and integrating Angular apps with RESTful services or GraphQL endpoints.'
+      "
+      [imageRoute]="'../../assets/angular-icon.png'"
+    ></app-card-component>
   </div>
-  <br />
-  <div
-    class="flex-container"
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutAlign="space-evenly center"
-  >
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'Java'"
-        [description]="
-          'Understanding in Java architecture, object-oriented programming and integrating RESTful services with Spring Boot.'
-        "
-        [imageRoute]="'../../assets/Java.jpg'"
-      ></app-card-component>
-    </div>
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'JavaScript'"
-        [description]="
-          'Proficient in JavaScript, for client-side web development, creating interactive web applications with Angular, and managing asynchronous operations.'
-        "
-        [imageRoute]="'../../assets/JavaScript.png'"
-      ></app-card-component>
-    </div>
-    <div class="skills" fxFlex="25">
-      <app-card-component
-        [title]="'Azure'"
-        [description]="
-          '          Proficient in Azure, for cloud computing services, managing and deploying applications on Azure App Service, and implementing data solutions with Azure SQL Database.'
-        "
-        [imageRoute]="'../../assets/PHP.png'"
-      ></app-card-component>
-    </div>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'Typescript'"
+      [description]="
+        'Proficient in TypeScript’s static typing, understanding of advanced types, generics, and decorators. Familiar with configuration and compiler options. Experience with testing TypeScript code and integration with build tools and frameworks.'
+      "
+      [imageRoute]="'../../assets/typescript.png'"
+    ></app-card-component>
+  </div>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'NgRx'"
+      [description]="
+        'Proficient in NgRx architecture, adept at implementing state management solutions for Angular applications. Proficient in leveraging NgRx Store, Effects, and Entity for efficient state handling and side-effect management, ensuring scalable and maintainable code.'
+      "
+      [imageRoute]="'../../assets/ngrx.png'"
+    ></app-card-component>
+  </div>
+</div>
+<div
+  class="flex-container"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign="space-evenly"
+>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'GraphQL'"
+      [description]="
+        'Skilled in GraphQL architecture, designing scalable schemas, and integrating GraphQL APIs with front-end applications. Experienced with Apollo Client for state management and proficient in testing GraphQL queries and mutations.'
+      "
+      [imageRoute]="'../../assets/GraphQL.png'"
+    ></app-card-component>
+  </div>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'C#'"
+      [description]="
+        'Proficient in .NET architecture, leveraging reactive programming principles, and proficient in testing with xUnit.net. Skilled in integrating .NET applications with RESTful services and GraphQL endpoints to build robust and scalable solutions.'
+      "
+      [imageRoute]="'../../assets/csharp.png'"
+    ></app-card-component>
+  </div>
+  <div class="skills" fxFlex="25">
+    <app-card-component
+      [title]="'Azure'"
+      [description]="
+        'Proficient in Azure, for cloud computing services, managing and deploying applications on Azure App Service, and implementing data solutions with Azure SQL Database.'
+      "
+      [imageRoute]="'../../assets/azure.png'"
+    ></app-card-component>
   </div>
 </div>
