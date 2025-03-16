@@ -12,7 +12,7 @@ import { ConfirmWindowComponent } from '../confirm-window/confirm-window.compone
 export class SidebarComponent implements OnInit, OnDestroy {
   faGithub = faGithub;
   faLinkedIn = faLinkedin;
-  title = 'Bogdan Kostadinov CV';
+  title = 'Bogdan Kostadinov';
   mode!: 'over' | 'side';
   openSidenav!: boolean;
   sub!: Subscription;
