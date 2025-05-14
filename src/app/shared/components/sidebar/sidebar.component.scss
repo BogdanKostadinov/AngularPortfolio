@@ -4,13 +4,14 @@ mat-sidenav-content {
 
 mat-nav-list {
   a {
-    padding-left: 3.5rem;
+    padding-left: 1rem;
   }
 
   mat-icon,
   fa-icon {
     vertical-align: middle;
     color: rgba(255, 255, 255, 0.7);
+    min-height: 27px;
   }
 
   .ml-2 {
