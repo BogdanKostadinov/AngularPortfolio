@@ -1,5 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { ConfirmWindowComponent } from '../confirm-window/confirm-window.component';
@@ -12,6 +13,7 @@ import { ConfirmWindowComponent } from '../confirm-window/confirm-window.compone
 export class SidebarComponent implements OnInit, OnDestroy {
   faGithub = faGithub;
   faLinkedIn = faLinkedin;
+  faDownload = faDownload;
   title = 'Bogdan Kostadinov';
   mode!: 'over' | 'side';
   openSidenav!: boolean;
