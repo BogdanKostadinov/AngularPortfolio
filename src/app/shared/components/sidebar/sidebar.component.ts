@@ -59,4 +59,13 @@ export class SidebarComponent implements OnInit, OnDestroy {
       window.open(url)?.focus();
     });
   }
+  downloadCv(): void {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/Bogdan CV.pdf');
+    link.setAttribute('download', 'Bogdan_Kostadinov_CV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
