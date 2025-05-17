@@ -13,6 +13,7 @@ import { CardComponent } from './shared/components/card-component/card-component
 import { ConfirmWindowComponent } from './shared/components/confirm-window/confirm-window.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { MaterialModule } from './shared/modules/material.module';
+import { ConfirmationDialogComponent } from './shared/components/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MaterialModule } from './shared/modules/material.module';
     CardComponent,
     ConfirmWindowComponent,
     ProjectsPageComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,
