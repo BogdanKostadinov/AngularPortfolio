@@ -1,9 +1,9 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { ConfirmWindowComponent } from '../confirm-window/confirm-window.component';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,11 +18,9 @@ export class SidebarComponent implements OnInit, OnDestroy {
   mode!: 'over' | 'side';
   openSidenav!: boolean;
   sub!: Subscription;
-  bsModalRef!: BsModalRef;
   private screenWidth$ = new BehaviorSubject<number>(window.innerWidth);
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor(private modalService: BsModalService) {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.sub = this.getScreenWidth().subscribe((width) => {
@@ -49,14 +47,17 @@ export class SidebarComponent implements OnInit, OnDestroy {
     return this.screenWidth$.asObservable();
   }
   openConfirmationWindow(url: string): void {
-    this.bsModalRef = this.modalService.show(ConfirmWindowComponent, {
-      initialState: {
-        message: 'Are you sure you want to navigate?',
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      data: {
+        title: 'Navigate to link?',
+        message: 'Are you sure you want to navigate to ' + url + '?',
       },
     });
 
-    this.bsModalRef.content.onConfirm.subscribe(() => {
-      window.open(url)?.focus();
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        window.open(url)?.focus();
+      }
     });
   }
   downloadCv(): void {
