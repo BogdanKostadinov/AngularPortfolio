@@ -66,6 +66,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
         title: 'Download CV?',
         message: "Are you sure you want to download Bogdan's resume?",
       },
+      panelClass: 'dark-dialog-theme',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
